@@ -138,7 +138,7 @@ const ListaProdutos: React.FC<ListaProdutosProps> = ({
                                   onChange={(e) =>
                                     setProdutoEditado((prev) => prev ? { ...prev, id: e.target.value } : null)
                                   }
-                                  className="mr-2 p-1 border border-gray-300 rounded text-black"
+                                  className="mr-2 p-1 border border-gray-300 rounded text-white"
                                   placeholder="ID"
                                 />
                               </div>
@@ -150,7 +150,7 @@ const ListaProdutos: React.FC<ListaProdutosProps> = ({
                                   onChange={(e) =>
                                     setProdutoEditado((prev) => prev ? { ...prev, preco: parseFloat(e.target.value) } : null)
                                   }
-                                  className="mr-2 p-1 border border-gray-300 rounded text-black"
+                                  className="mr-2 p-1 border border-gray-300 rounded text-white"
                                   placeholder="Preço"
                                 />
                               </div>
@@ -162,7 +162,7 @@ const ListaProdutos: React.FC<ListaProdutosProps> = ({
                                   onChange={(e) =>
                                     setProdutoEditado((prev) => prev ? { ...prev, quantidade: parseInt(e.target.value) } : null)
                                   }
-                                  className="mr-2 p-1 border border-gray-300 rounded text-black"
+                                  className="mr-2 p-1 border border-gray-300 rounded text-white"
                                   placeholder="Quantidade"
                                 />
                               </div>
@@ -175,7 +175,7 @@ const ListaProdutos: React.FC<ListaProdutosProps> = ({
                                     onChange={(e) =>
                                       setProdutoEditado((prev) => prev ? { ...prev, peso: parseFloat(e.target.value) } : null)
                                     }
-                                    className="mr-2 p-1 border border-gray-300 rounded text-black"
+                                    className="mr-2 p-1 border border-gray-300 rounded text-white"
                                     placeholder="Peso (g)"
                                   />
                                 </div>
@@ -189,7 +189,7 @@ const ListaProdutos: React.FC<ListaProdutosProps> = ({
                                     onChange={(e) =>
                                       setProdutoEditado((prev) => prev ? { ...prev, ml: parseFloat(e.target.value) } : null)
                                     }
-                                    className="mr-2 p-1 border border-gray-300 rounded text-black"
+                                    className="mr-2 p-1 border border-gray-300 rounded text-white"
                                     placeholder="Ml"
                                   />
                                 </div>
