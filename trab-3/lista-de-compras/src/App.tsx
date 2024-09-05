@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useState } from 'react';
 import CadastroProdutoForm from './components/CadastroProdutoForm';
 import ListaProdutos from './components/ListaProdutos';
@@ -40,12 +39,24 @@ const App: React.FC = () => {
               }
             : produto
         )
-        .filter((produto) => produto.quantidade > 0) // Remove produtos com quantidade 0
+        .filter((produto) => produto.quantidade > 0)
     );
   };
 
   const removerProduto = (id: string) => {
     setProdutos(produtos.filter((produto) => produto.id !== id));
+  };
+
+  const editarProduto = (produtoEditado: Produto) => {
+    setProdutos(
+      produtos.map((produto) =>
+        produto.id === produtoEditado.id ? produtoEditado : produto
+      )
+    );
+  };
+
+  const limparLista = () => {
+    setProdutos([]);
   };
 
   return (
@@ -57,6 +68,8 @@ const App: React.FC = () => {
         onAdicionarQuantidade={adicionarQuantidade}
         onRemoverQuantidade={removerQuantidade}
         onRemoverProduto={removerProduto}
+        onEditarProduto={editarProduto}
+        onLimparLista={limparLista}
       />
     </div>
   );
